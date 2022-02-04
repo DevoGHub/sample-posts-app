@@ -2,13 +2,12 @@ import './home.css';
 
 import Table from '../table/table.js';
 
-import { useContext, useEffect, useState } from 'react';
-import { valuesContext } from '../../Context.js';
+import { useEffect, useState } from 'react';
 
 function Home(){
     // States and Contexts
-    const {values, setValues} = useContext(valuesContext);
     const [valuesFilled, setValuesFilled] = useState(false);
+    const [values, setValues] = useState([]);
     const [rowCount, setRowCount] = useState(0);
 
     // Effects
@@ -81,7 +80,7 @@ function Home(){
             </div>
 
             {
-                values.length === 0 ? <h2 style = {{textAlign : 'center'}}>Enter the values and click on view to view table</h2> : <Table tableArr = {values}/>
+                values.length === 0 ? <h2 style = {{textAlign : 'center'}}>Enter the values and click on view to view table</h2> : <Table tableArr = {values} />
             }
         </div>
     );

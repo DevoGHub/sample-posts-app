@@ -21,14 +21,45 @@ a{
   text-decoration: none;
 }
 
-/* input{
+.main-component{
+  margin : 20px;
+  width : calc(100vw - 40px);
+}
 
+.main-flex{
+  display : flex;
+}
+
+.column-flex{
+  flex-direction: column;
+}
+
+.row-flex{
+  flex-direction: row;
+}
+
+.main-grid{
+  display: grid;
 }
 
 button{
-
+  background-color: #55f;
+  color : white;
+  border: solid 1px #aaa;
+  padding : 5px;
+  transition: 0.1s;
 }
 
-a{
+button:not([disabled]):hover{
+  transform: scale(1.05);
+  transition: 0.2s;
+}
 
-} */
+button[disabled]{
+  opacity : 0.5;
+}
+
+input, select{
+  padding : 7px;
+  width : 200px;
+}

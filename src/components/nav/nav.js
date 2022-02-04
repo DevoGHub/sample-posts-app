@@ -7,7 +7,7 @@ function Nav(){
         <header>
             <Link to = '/'>
                 <div className='nav-logo-div'>
-                    <img src={src} />
+                    <img src={src} alt='logo'/>
                 </div>
             </Link>
 

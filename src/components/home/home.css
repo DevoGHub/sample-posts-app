@@ -1,0 +1,30 @@
+.first-div{
+    margin-bottom : 30px;
+}
+
+.first-div form{
+    display: flex;
+    flex-direction: row;
+    gap : 100px;
+}
+
+.first-div form > div:first-child{
+    display: grid;
+    gap : 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    flex : 3;
+}
+
+label{
+    display: block;
+    margin-bottom: 10px;
+    color : #888;
+}
+
+.mand-star{
+    color : #d00;
+}
+
+.first-div form > div:nth-child(2){
+    flex: 1;
+}
