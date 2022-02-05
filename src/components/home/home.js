@@ -81,7 +81,7 @@ function Home(){
             </div>
 
             {
-                values.length === 0 ? <h2 style = {{textAlign : 'center'}}>Enter the values and click on view to view table</h2> : <Table tableArr = {values}/>
+                values.length === 0 ? <h2 style = {{textAlign : 'center'}}>Enter the values and click on view to view table</h2> : <Table tableArr = {values}/> // {Table({tableArr : values})}
             }
         </div>
     );

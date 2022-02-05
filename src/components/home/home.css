@@ -15,7 +15,7 @@
     flex : 3;
 }
 
-label{
+.first-div form label{
     display: block;
     margin-bottom: 10px;
     color : #888;

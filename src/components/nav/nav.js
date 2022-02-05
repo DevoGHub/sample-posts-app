@@ -1,8 +1,21 @@
 import './nav.css';
 import src from '../../resources/logo.png';
 import {Link, NavLink} from 'react-router-dom';
+import Cookies from 'js-cookie';
+import { useContext } from 'react';
+import { loggedInContext } from '../../Context';
 
 function Nav(){
+    // States
+    const {setLoggedIn} = useContext(loggedInContext);
+
+    // DOM functions
+    function logout(){
+        Cookies.remove('loggedIn');
+        setLoggedIn(false);
+    }
+    
+    // Component returns
     return (
         <header>
             <Link to = '/'>
@@ -27,6 +40,8 @@ function Nav(){
                         Users
                     </div>
                 </NavLink>
+
+                <button type='button' onClick={logout}>Logout</button>
             </div>
         </header>
     );
