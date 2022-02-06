@@ -9,6 +9,7 @@ import { useState } from 'react';
 import { valuesContext, loggedInContext } from './Context.js';
 import Login from './components/login/login.js';
 import Cookies from 'js-cookie';
+import ViewPost from './components/viewPost/viewPost';
 
 function App() {
   // States
@@ -52,9 +53,12 @@ function App() {
 
           <Routes>
             <Route path ='/' element = {<Home />} />
-            <Route path = '/home' element = {<Navigate replace to = '/' />} />
-            <Route path ='/posts' element = {<Posts />} />
-            <Route path ='/users' element = {<Users />} />
+            <Route path = 'home' element = {<Navigate replace to = '/' />} />
+            
+            <Route path ='posts' element = {<Posts />} />
+            <Route path = 'posts/:id' element = {<ViewPost />} />
+
+            <Route path ='users' element = {<Users />} />
             
             <Route path = '*' element = {<NotFound />} />
           </Routes>
