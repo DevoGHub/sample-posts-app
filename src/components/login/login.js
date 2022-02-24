@@ -10,7 +10,7 @@ function Login(){
     // DOM functions
     function login(e){
         e.preventDefault();
-        document.querySelector('#login-remember').checked && Cookies.set('loggedIn', '12', {expires : 365})
+        document.querySelector('#login-remember').checked && Cookies.set('loggedIn', '12', {expiry : '365'})
         setLoggedIn(true);
     }
 
